@@ -1,3 +1,5 @@
+CODE: TRS_25;
+
 /* Problem 1 */
 
 function calculateVat(amount) {
