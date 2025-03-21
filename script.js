@@ -2,12 +2,12 @@ CODE: TRS_25;
 
 /* Problem 1 */
 
-function calculateVat(amount) {
-  if (typeof amount !== "number") {
+function calculateVat(price) {
+  if (typeof price !== "number") {
     return "invalid";
   }
   const vatRate = 7.5 / 100;
-  const vat = amount * vatRate;
+  const vat = price * vatRate;
   return vat;
 }
 
@@ -15,21 +15,21 @@ function calculateVat(amount) {
 
 /* Problem 2 */
 
-function validContact(number) {
-  if (typeof number !== "string") {
+function validContact(contact) {
+  if (typeof contact !== "string") {
     return false;
   }
-  if (!number.startsWith("01")) {
+  if (!contact.startsWith("01")) {
     return false;
   }
-  if (number.length !== 11) {
+  if (contact.length !== 11) {
     return false;
   }
   return true;
 }
 /*
-const number = "01819234567";
-console.log(validContact(number));
+const contact = "01819234567";
+console.log(validContact(contact));
 */
 
 /* Problem 3 */
@@ -88,12 +88,12 @@ console.log(
 
 /* Problem 5 */
 
-function calculateSleepTime(array) {
-  if (!array.every((item) => typeof item === "number")) {
+function calculateSleepTime(times) {
+  if (!times.every((item) => typeof item === "number")) {
     return "invalid";
   }
 
-  let totalSeconds = array.reduce(
+  let totalSeconds = times.reduce(
     (accumulator, currentValue) => accumulator + currentValue,
     0
   );
@@ -106,6 +106,6 @@ function calculateSleepTime(array) {
 }
 
 /*
-const array = [3600, 1800, 4003];
-console.log(calculateSleepTime(array));
+const times = [1000, 2000, 725];
+console.log(calculateSleepTime(times));
 */
