@@ -58,7 +58,8 @@ function willSuccess(marks) {
 
 /*
 const marks = [55, 75, 41, 33, 0, 87, 91, 30];
-console.log(willSuccess(marks));*/
+console.log(willSuccess(marks));
+*/
 
 /* Problem 4 */
 
